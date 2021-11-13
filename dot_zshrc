@@ -4,8 +4,10 @@ ZSH_THEME="nick"
 
 plugins=(
 	git
-	colored-man-pages
+	gh
 	nvm
+	npm
+	colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
