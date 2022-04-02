@@ -1,6 +1,6 @@
-export ZSH="/home/nick/.oh-my-zsh"
+export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 
-ZSH_THEME="nick"
+ZSH_THEME="{{ .chezmoi.group }}"
 
 plugins=(
 	git
@@ -76,7 +76,7 @@ for key     kcap   seq        mode   widget (
   bindkey ${terminfo[$kcap]-$seq} key-$key
 }
 
-export DENO_INSTALL="/home/nick/.deno"
+export DENO_INSTALL="{{ .chezmoi.homeDir }}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export EDITOR="code --wait" 
