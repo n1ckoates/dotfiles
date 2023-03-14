@@ -1,11 +1,11 @@
 export ZSH="{{ .chezmoi.homeDir }}/.oh-my-zsh"
 
-ZSH_THEME="{{ .chezmoi.group }}"
+ZSH_THEME="nick"
 
 plugins=(
 	git
 	gh
-	nvm
+	fnm
 	npm
 	colored-man-pages
 )
@@ -79,4 +79,8 @@ for key     kcap   seq        mode   widget (
 export DENO_INSTALL="{{ .chezmoi.homeDir }}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export EDITOR="code --wait" 
+export EDITOR="code --wait"
+
+# fnm
+export PATH="{{ .chezmoi.homeDir }}/.local/share/fnm:$PATH"
+eval "`fnm env`"
